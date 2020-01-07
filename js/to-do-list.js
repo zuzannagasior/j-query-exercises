@@ -19,11 +19,6 @@ function validateAddBtn() {
     };
 };
 
-// function change(e) {
-//     console.log(e, 'e');
-//     console.log('e.target.name', e.target.name);
-// };
-
 function resetAddNewTask() {
     newTask.val('');
     inputAdd.attr('disabled', false);
@@ -45,28 +40,20 @@ function showCompleted(e) {
     };
 };
 
-function watchCheckboxes() {
-    var checkboxes = toDoListForm.find(':checkbox');
-    checkboxes.on('change', change);
-};
-
 function addNewTask(e) {
     e.preventDefault();
 
     var newTaskVal = newTask.val();
 
     var taskListHtml = taskList.html();
-    var newCheckboxHtml = '<input type="checkbox" name="task_' + taskIndex + 'value="value"/>';
+    var newCheckboxHtml = '<input type="checkbox" name="task_' + taskIndex + '" value="value"/>';
     var newTaskHtml = '<li>' + newTaskVal  + '</li>' + newCheckboxHtml;
     
     taskList.html(taskListHtml.concat(newTaskHtml));
     
-    // watchCheckboxes();
-
     taskIndex++;
 
     resetAddNewTask();
-    
 };
 
 newTask.on('keyup', validateAddBtn);
