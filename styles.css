@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    width: 100%;
+}
+
+.box {
+    margin: 32px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.converter, .timer, .register {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 16px;
+}
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 16px;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.to-do-list {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.register  {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.newsl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.newsl-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.fit-picture {
+    height: 150px;
+    width: auto;
+    margin: 8px;
+}
+
+.news-titles {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    justify-content: flex-start;
+    height: 60px;
+    justify-content: space-between;
+   
+}
+
+.temp-box, .timer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.temp-box label, .timer-box label {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.temp-box input, .timer-box input, .custom-input {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    height: 32px;
+    width: 152px;
+    font-size: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.to-do-inputs-box input:first-child {
+    margin-top: 4px;
+    height: 32px;
+    width: 200px;
+    font-size: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.temp-box input:disabled, .timer-box input:disabled, .custom-input:disabled {
+    background-color: white;
+}
+
+.temp-box input:focus, .timer-box input:focus, .custom-input:focus, .to-do-inputs-box input:first-child:focus {
+   border: 1px solid rgb(230, 158, 92);
+   outline-color: rgb(230, 158, 92);
+}
+
+.invalid {
+    border: 1px solid rgb(155, 0, 0);
+}
+
+.to-do-submit {
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    background-color: rgb(230, 158, 92);
+    border: 1px solid rgb(230, 158, 92);
+}
+
+.timer-submit {
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    background-color: rgb(230, 158, 92);
+    border: 1px solid rgb(230, 158, 92);
+}
+
+.converter-submit {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background-color: rgb(230, 158, 92);
+    border: 1px solid rgb(230, 158, 92);
+}
+
+.newsletter-submit {
+    height: 32px;
+    cursor: pointer;
+    background-color: rgb(230, 158, 92);
+    border: 1px solid rgb(230, 158, 92);
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.converter-submit:focus, .timer-submit:focus, .newsletter-submit:focus, .register-submit:focus {
+    outline-color: rgb(177, 124, 75);
+}
+
+.reg-inputs-box {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-valid-box {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.reg-inputs-box input:first-child {
+    margin-bottom: 8px;
+}
+
+.strenght-sq {
+    width: 32px;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.strenght-sq:nth-child(2) {
+    background-color: rgb(255, 193, 77);
+}
+
+.strenght-sq:nth-child(3) {
+    background-color: rgb(238, 238, 108);
+}
+
+.strenght-sq:nth-child(4) {
+    background-color: rgb(66, 126, 66);
+}
+
+.register-submit {
+    height: 32px;
+    width: 152px;
+    cursor: pointer;
+    background-color: rgb(230, 158, 92);
+    border: 1px solid rgb(230, 158, 92);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.register-submit:disabled, .newsletter-submit:disabled, .to-do-submit:disabled {
+    color: black;
+    background-color: rgb(235, 182, 132);
+    border: 1px solid rgb(235, 182, 132);
+    cursor: not-allowed;
+}
+
+.to-do-inputs-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.show-completed-box {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.to-do-list ul {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 16px;
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.to-do-list ul>li {
+    margin-top: 4px;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.to-do-list ul>input {
+    margin-top: 8px;
+}

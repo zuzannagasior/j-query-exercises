@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Konwerter temperatur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="box">
+            <h2>Timer</h2>
+            <form name="timer" class="timer">
+                <div class="timer-box">
+                    <label for="min">Minutes</label>
+                    <input id="min" name="minutes" min="0" max="59" type="number">
+                </div>
+                <div class="timer-box">
+                    <label for="sec">Seconds</label>
+                    <input id="sec" name="seconds" min="0" max="59" type="number">
+                </div>
+
+                <input type="submit" class="timer-submit" value="Start">
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="box">
+            <h2>Newsletter</h2>
+            <form class="newsletter">
+                <div class="newsl-row">
+                    <div class="news-titles">
+                        <h3>Tytuł</h3>
+                        <h4>Treść...</h4>
+                    </div>
+                    <img class="fit-picture" src="pic.jpg" alt="picasso">
+                </div>
+                <div class="newsl-row">
+                    <div class="newsl-col">
+                        <input id="name" class="custom-input" type="text" placeholder="Imię" />
+                    </div>
+                    <div class="newsl-col">
+                        <input id="email" class="custom-input" type="text" placeholder="E-mail" />
+                    </div>
+                    <input type="submit" class="newsletter-submit" value="Subscribe" disabled>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="box">
+            <h2>Converter</h2>
+            <form class="converter">
+                <div class="temp-box">
+                    <label id="label-for-t1" for="t1">Celsius</label>
+                    <input id="t1" data-convert-from="celsius" name="temp1" type="number">
+                </div>
+                <input class="converter-submit" type="submit" value="⇆">
+                <div class="temp-box">
+                    <label id="label-for-t2" for="t2">Fahrenheit</label>
+                    <input id="t2" name="temp2" type="number" disabled>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="box">
+            <h2>Register</h2>
+            <form class="register">
+                <img class="fit-picture" src="pic.jpg" alt="picasso">
+                <h3>Title</h3>
+                <div class="reg-inputs-box">
+                    <input id="login" class="custom-input" type="text" placeholder="Login" />
+                    <input id="password" class="custom-input" type="password" placeholder="Password" />
+                </div>
+                <div class="reg-valid-box">
+                    <span>Password strength:</span>
+                    <div id="weak" class="strenght-sq"></div>
+                    <div id="average" class="strenght-sq" hidden></div>
+                    <div id="strong" class="strenght-sq" hidden></div>
+                </div>
+                <input class="register-submit" type="submit" value="Sign up" disabled>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="box">
+            <h2>To-Do List</h2>
+            <form class="to-do-list">
+                <div class="to-do-inputs-box">
+                    <input id="newTask" type="text" placeholder="Add new task..." />
+                    <input class="to-do-submit" type="submit" value="Add" disabled>
+                </div>
+                <ul></ul>
+                <div class="show-completed-box">
+                    <input type="checkbox" name="showCompleted" id="showCompleted" value="value" />
+                    <label for="showCompleted">show completed</label>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+    <script src="./jquery.min.js"></script>
+    <script src="./timer.js"></script>
+    <script src="./newsletter.js"></script>
+    <script src="./converter.js"></script>
+    <script src="./register.js"></script>
+    <script src="./to-do-list.js"></script>
+
+</body>
+
+</html>
