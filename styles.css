@@ -22,6 +22,15 @@ main {
     align-items: flex-end;
     margin-top: 16px;
 }
+
+.currency-calc {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
 .newsletter {
     display: flex;
     flex-direction: column;
@@ -90,7 +99,7 @@ main {
     margin-left: 8px;
 }
 
-.temp-box input, .timer-box input, .custom-input {
+.temp-box input, .timer-box input, .custom-input, .currency-calc input {
     margin-left: 8px;
     margin-right: 8px;
     margin-top: 4px;
@@ -110,11 +119,12 @@ main {
     padding-right: 4px;
 }
 
-.temp-box input:disabled, .timer-box input:disabled, .custom-input:disabled {
+.temp-box input:disabled, .timer-box input:disabled, .custom-input:disabled,  .currency-calc input:disabled {
     background-color: white;
 }
 
-.temp-box input:focus, .timer-box input:focus, .custom-input:focus, .to-do-inputs-box input:first-child:focus {
+.temp-box input:focus, .timer-box input:focus, .custom-input:focus, .to-do-inputs-box input:first-child:focus,  
+.currency-calc input:focus {
    border: 1px solid rgb(230, 158, 92);
    outline-color: rgb(230, 158, 92);
 }
@@ -250,4 +260,16 @@ main {
 
 .to-do-list ul>input {
     margin-top: 8px;
+}
+
+.currency-calc span {
+    font-size: 24px;
+    color: rgb(230, 158, 92);
+    margin-top: 4px;
+}
+
+.currency-calc select {
+    height: 32px;
+    margin-right: 8px;
+    margin-top: 4px;
 }
