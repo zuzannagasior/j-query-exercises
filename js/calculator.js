@@ -57,7 +57,8 @@ function handleClick(e) {
             result.html('');
         } else {
             if ((tmpOperation !== innerText) && // for avoiding multiple click errors
-                !!calculatorInput.val()) { // do operation only if there is a value in input
+                !!calculatorInput.val() && // do operation only if there is a value in input
+                ((innerText !== '=') || (innerText === '=' && !!tmpOperation))) { 
                 if (!!tmpOperation) {
                     operation(tmpOperation, innerText);
                 } else {
