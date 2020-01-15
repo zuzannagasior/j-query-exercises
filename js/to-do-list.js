@@ -28,10 +28,10 @@ function showCompleted(e) {
     var showCompleted = e.target.checked;
 
     var checkboxes = toDoListForm.find('ul :checkbox');
-    var uncheckedCheckboxes = checkboxes.filter( ":not(:checked)");
+    var uncheckedCheckboxes = checkboxes.filter(":not(:checked)");
     var uncheckedTasks = uncheckedCheckboxes.prev();
 
-    if(showCompleted) {
+    if (showCompleted) {
         uncheckedCheckboxes.hide();
         uncheckedTasks.hide();
     } else {
@@ -44,16 +44,17 @@ function addNewTask(e) {
     e.preventDefault();
 
     var newTaskVal = newTask.val();
+    if (!!newTaskVal.trim()) {
+        var taskListHtml = taskList.html();
+        var newCheckboxHtml = '<input type="checkbox" name="task_' + taskIndex + '" value="value"/>';
+        var newTaskHtml = '<li>' + newTaskVal + '</li>' + newCheckboxHtml;
 
-    var taskListHtml = taskList.html();
-    var newCheckboxHtml = '<input type="checkbox" name="task_' + taskIndex + '" value="value"/>';
-    var newTaskHtml = '<li>' + newTaskVal  + '</li>' + newCheckboxHtml;
-    
-    taskList.html(taskListHtml.concat(newTaskHtml));
-    
-    taskIndex++;
+        taskList.html(taskListHtml.concat(newTaskHtml));
 
-    resetAddNewTask();
+        taskIndex++;
+
+        resetAddNewTask();
+    };
 };
 
 newTask.on('keyup', validateAddBtn);
