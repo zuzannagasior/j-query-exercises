@@ -8,3 +8,6 @@
 5. To do list
 6. Currency calculator
 7. Calculator
+
+# Live demo
+https://zuzannagasior.github.io/j-query-exercises/
